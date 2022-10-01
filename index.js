@@ -27,8 +27,7 @@ function Aluno(paramNome, paramQuantidadeDeFaltas, paramNotas) {
   let aluno6 = new Aluno("Mateus", 0, [9, 8, 9]);
   let aluno7 = new Aluno("Pedro", 1, [0, 8, 0]);
   let aluno8 = new Aluno("Soraia", 3, [8, 8.5, 7]);
-  // aluno1.faltas()
-  // console.log(aluno1)
+  
   
   // Passo 3 = crie o objeto literal curso
   let curso = {
@@ -43,7 +42,7 @@ function Aluno(paramNome, paramQuantidadeDeFaltas, paramNotas) {
       aluno5,
       aluno6,
       aluno7,
-      aluno8,
+      aluno8
     ],
     // Passo 4 = criar metodo adicionar alunos
     adicionarAluno(aluno) {
@@ -68,9 +67,11 @@ function Aluno(paramNome, paramQuantidadeDeFaltas, paramNotas) {
     },
     // Passo 6 = percorrer array com situação de aprovação
     situacaoDosAlunos(){
-        let quadroResultados = []
-        for(let i = 0; i < this.listaEstudantes.length; i++){
-            quadroResultados.push(this.situacaoAluno(this.listaEstudantes[i]))
-        }
-        return quadroResultados
+      let quadroResultados = []
+      for(let i = 0; i < this.listaEstudantes.length; i++){
+          quadroResultados.push(this.situacaoAluno(this.listaEstudantes[i]))
       }
+      return quadroResultados
+    }
+  };
+  
